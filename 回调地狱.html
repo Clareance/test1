@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* 左右对齐，中间留空 */
+  align-items: center; /* 垂直居中所有子元素 */
+  height: 100px; /* 容器高度，根据需要调整 */
+  padding: 0 10px; /* 容器内边距，根据需要调整 */
+}
+
+.left-text,
+.right-text {
+  flex-shrink: 0; /* 防止文本收缩 */
+}
+
+.left-text {
+  margin-right: auto; /* 左文本右对齐 */
+}
+
+.right-text {
+  margin-left: auto; /* 右文本左对齐 */
+}
+
+.center-text {
+  flex-grow: 1; /* 中间文本占据剩余空间 */
+  text-align: center; /* 水平居中文本 */
+}
+</style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="left-text">左边文本</div>
+        <div class="center-text">中间文本</div>
+        <div class="right-text">右边文本</div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <!-- <link rel="stylesheet" href="css1.css"> -->
+    <style>
+        .outer{
+            display: flex;
+            width: 1000px;
+            background-color: skyblue;
+
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+            /* /* flex-direction: row; */
+            flex-wrap: wrap-reverse; 
+            /* flex-flow: row wrap; */
+            justify-content: center;
+            align-items: center;
+            margin: auto auto;
+        }
+        .box{
+            display: flex;
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            line-height: 200px;
+            order:3;
+        }
+        .box1{
+            background-color: #888;
+            height: 100px;
+            line-height :100px;
+            flex-shrink: 0;
+        }
+        .box2{
+            background-color: orange;
+            height: 120px;
+            line-height: 120px;
+        }
+        .box3{
+            background-color: green;
+            height: 140px;
+            line-height: 140px;
+        }
+        .box4{
+            background-color: #888;
+            height: 160px;
+            line-height:160px;
+            order: 0;
+        }
+        .box5{
+            background-color: orange;
+            height: 180px;
+            /* line-height: 180px; */
+        }
+        .box6{
+            background-color: green;
+            height: 200px;
+            /* line-height: 200px; */
+        }
+        .box7{
+            background-color: orange;
+            height: 220px;
+            /* line-height: 220px; */
+        }
+        .box8{
+            background-color: green;
+            height: 240px;
+            /* line-height: 240px; */
+        }
+        .box:nth-child(2n+1){
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+</body>
+
+<script>
+    
+</script>
+
+</html> 

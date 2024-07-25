@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      height: 3000px;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid #c0c0c0;
+      width: 500px;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    th {
+      background-color: #09c;
+      font: bold 16px "微软雅黑";
+      color: #fff;
+      height: 24px;
+    }
+
+    td {
+      border: 1px solid #d0d0d0;
+      color: #404060;
+      padding: 10px;
+    }
+
+    .allCheck {
+      width: 80px;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th class="allCheck">
+        <input type="checkbox" name="" id="checkAll"> <span class="all">全选</span>
+      </th>
+      <th>商品</th>
+      <th>商家</th>
+      <th>价格</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="check" class="ck">
+      </td>
+      <td>小米手机</td>
+      <td>小米</td>
+      <td>￥1999</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="check" class="ck">
+      </td>
+      <td>小米净水器</td>
+      <td>小米</td>
+      <td>￥4999</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="check" class="ck">
+      </td>
+      <td>小米电视</td>
+      <td>小米</td>
+      <td>￥5999</td>
+    </tr>
+  </table>
+  <script>
+
+
+    window.addEventListener('scroll',function(e){
+      console.log(e)
+    })
+      // 获取大按钮
+      const big_ck = document.querySelector('#checkAll');
+      // 获取所有小复选框
+      const ck_list=document.querySelectorAll('.ck');
+
+      // 点击大复选框 注册事件
+      big_ck.addEventListener('click',function(){
+        // 得到当前大复选框的选中状态
+        // console.log(this.checked)
+        // 若大框被选中，则下面小框全部选中
+        for(let i = 0;i<ck_list.length;i++){
+          ck_list[i].checked = big_ck.checked;
+          
+        }
+      })
+      // 小复选框控制大复选框
+      // 1.给所有的小框添加点击事件
+      let sum_click = 0;
+
+      for(let i = 0;i<ck_list.length;i++){
+          ck_list[i].addEventListener('click',function(){
+              
+              // sum_click = sum_click + 1;
+              // if(sum_click === 3)
+              // {
+              //   big_ck.checked = true;
+              //   sum_click = 0;
+              // }
+              // 打印小框被选中的个数
+              // console.log(document.querySelectorAll('.ck:checked').length === ck_list.length);
+              big_ck.checked = document.querySelectorAll('.ck:checked').length === ck_list.length
+      }
+          )}
+      
+      
+
+
+
+  </script>
+</body>
+
+</html>

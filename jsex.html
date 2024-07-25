@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  
+</head>
+<body>
+    <div>
+
+    </div>
+    
+    <script>
+    // let a=[1,2,3,[4,5,[6,7]]]
+    
+    // // a = Array.from(a);
+    // // console.log(a);
+    // const result = [];
+    // function arrsplice(){
+    //     let args = Array.from(...arguments);
+    //     // console.log(args);
+    //     for(let ele of args){
+            
+    //         if(ele.length>1){
+    //             return arrsplice(ele)
+    //         }
+    //         else
+    //             result.push(ele)
+                
+    //     }
+        
+    // }    
+    
+    // arrsplice(a)
+    // console.log(result);
+    window.b = 1;
+    
+    const fn2 = () => {console.log(this.b);}
+    const aa = {
+        b: 2,
+        k: () => {return fn();},
+        o: function () {return fn();},
+        l: () => {return fn2();},
+        p: function () {return fn2();},
+        j: () => {fn.call(this);},
+        u: function () {fn.call(this);}
+    }
+
+    window.t = '哈'
+    function fn() {console.log(this.t);}
+    const test ={
+        t : '额',
+        hello(){
+            console.log(this.t);
+        },
+        oo: function () {return fn();},//哈
+        o: function () {console.log(this.t);}//额
+    }
+   
+    test.oo();
+    test.o();
+   
+    var a = 1;
+    function foo(){
+        console.log(a);
+        let a = function(){}
+    }
+    foo();
+
+    
+    // a.k();
+    // a.o();////
+    // a.l();
+    // a.p();
+    // a.j();
+    // a.u();
+    </script>
+</body>
+</html>

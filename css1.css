@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.box{
+    /* width: 500px; */
+    height: 280px;
+    background-color: pink;
+    border: 1px solid gold;
+    border-radius:50px;
+    padding: 15px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    /* margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto; */
+    /* 背景处理 */
+    background-color: #a46464;
+    /* background-image: url(./image/0.jpg); */
+    box-shadow: 5px,6px,7px grey;
+}
+
+.box h1{
+    color: green;
+    text-indent: 2em;
+    font-size: 50px;
+    font-family: '黑体';
+    font-weight: normal;
+    height: 180px;
+    line-height: 180px;
+    text-shadow: 2px;
+}
+
